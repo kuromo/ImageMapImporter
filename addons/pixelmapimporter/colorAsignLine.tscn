@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cff4f46jb8ncg"]
+
+[node name="ColorAsignLine" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="ColorDisplay" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+color = Color(0.0941176, 1, 1, 1)
+
+[node name="ColorValue" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "(0.00, 0.00, 0.00, 1)"
+
+[node name="DropdownPlaceholder" type="Panel" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AssetDropdownOrg" type="OptionButton" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3

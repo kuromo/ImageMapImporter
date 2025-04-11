@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://dj3jau0k3fi3m"
+path="res://.godot/imported/drawnMap.png-f84f7f44063ceef8829dfe35dba57a5e.image"
+
+[deps]
+
+source_file="res://drawnMap.png"
+dest_files=["res://.godot/imported/drawnMap.png-f84f7f44063ceef8829dfe35dba57a5e.image"]
+
+[params]
+

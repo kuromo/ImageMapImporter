@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2nyr353jh3ja"]
+
+[ext_resource type="Script" uid="uid://qssgekpj587c" path="res://addons/pixelmapimporter/imageInput.gd" id="1_qqlcy"]
+[ext_resource type="Script" uid="uid://bd8jlwikvxjte" path="res://addons/pixelmapimporter/imageTextDrop.gd" id="2_qqlcy"]
+
+[node name="ImageInput" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_qqlcy")
+
+[node name="ImageText" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_qqlcy")
+
+[node name="ImageBrowserBtn" type="Button" parent="."]
+layout_mode = 2
+text = "..."
+
+[node name="ImageBrowser" type="FileDialog" parent="ImageBrowserBtn"]
+auto_translate_mode = 1
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Open"
+file_mode = 0
+filters = PackedStringArray("*.png")
+
+[connection signal="fileDroped" from="ImageText" to="." method="_on_image_browser_file_selected"]
+[connection signal="button_down" from="ImageBrowserBtn" to="." method="_on_image_browser_btn_down"]
+[connection signal="file_selected" from="ImageBrowserBtn/ImageBrowser" to="." method="_on_image_browser_file_selected"]

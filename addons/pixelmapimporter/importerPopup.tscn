@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dsvqfj3sbnrt1"]
+
+[node name="ImporterPopup" type="Popup"]
+initial_position = 1
+size = Vector2i(400, 300)
+visible = true
+unresizable = false
+borderless = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0954426, 0.124351, 0.165633, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer"]
+layout_mode = 2
